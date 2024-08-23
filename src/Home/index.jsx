@@ -1,7 +1,10 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import Header from '../components/Header/Header';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';  
+import ListarProdutos from '../components/ListarProdutos';  
 export default function HOME() {
-    const [produtosHome, setProdutosHomes] = useState([
+    const [produtosHome, setProdutosHome] = useState([
         {
 
             id: 1,
@@ -136,28 +139,39 @@ export default function HOME() {
 
             tamanho: "P"
         }
-    ])};
+    ]);
 
-return(
-    <>
-    <header>
-        <p></p>
-        <carousel
-            infiniteloop usekeyboardArrows autoPlay
-            showArrows={true}
-            showArrows={true}
-            showArrows={true}
-            >
-                <div>
-                    <img src=""/>
+    return(
+        <>
+        <Header/>
+        <div class='carousel-principal'>
+        <Carousel 
+                infiniteLoop
+                useKeyboardArrows
+                autoPlay
+                showArrows={true}
+                showStatus={false}
+                showThumbs={false}
+
+                dynamicHeight>
+                <div id='carousel-img'>
+                    <img src='https://i.ytimg.com/vi/Xqo0vcd1Cz4/hqdefault.jpg' alt="Slide 1" />
                 </div>
-                <div>
-                    <img src=""/>
+
+                <div id='carousel-img'>
+                    <img src='https://image.tmdb.org/t/p/original/9dvbF3d97BpRAqZKNs49VDzJhqk.jpg' alt="Slide 2" />
                 </div>
-                <div>
-                    <img src=""/>
+                  
+                <div id='carousel-img'>
+                    <img src=' 'alt="Slide 3" />
                 </div>
-            </carousel>
-            </header>
-            </>
-)
+      
+            </Carousel>
+            <ListarProdutos Produtos ={produtosHome}  />
+        </div>
+
+        
+
+        </>
+    );
+    }
