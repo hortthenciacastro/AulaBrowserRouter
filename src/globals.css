@@ -1,56 +1,119 @@
-header{
-    display: flex;
-    height: 30px; 
-    padding: 30px ;
-    margin: -8px ;
-    background-color: #02062a;
-    justify-content: space-between;
-   
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    }
-
-    h1{
-    display: flex;
+.header, .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
-    color: rgb(223, 222, 232);
-    margin-top: -5px;
+}
 
-
-    }
-
-    .header-link{ 
-    display: flex;
-    color: rgb(223, 222, 232);
-    margin-top: -3px;
-    font-size: 25px; /* tamanho fonte*/
-    display: inline-block; 
-    margin-right: 70px;  /*espaçamento entre as paginas*/
-    text-align: left; 
+.header a, .footer a {
+    color: #ffffff;
     text-decoration: none;
-    }
+}
 
-    .carousel-pincipal{
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-content {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.carousel img {
     width: 100%;
-    justify-content:center;
-    background-size: cover; 
-    
-    }
+    height: auto;
+}
 
-    #carousel-img{
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+}
+
+.card img {
+    width: 500px;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.card-container {
     display: flex;
-    width: 100%;
-    height: 50%;
-    margin-top: 20px;
-    background-size: cover; /*  a iamgem cobre toda a tela*/
-    }
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-    #item{
+.container {
     display: flex;
-    min-height: 170vh;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-
+@media screen and (max-width: 1200px) {
+    .menu {
+        margin-top: 20px;
+        font-size: 14px;
     }
+
+
+    .caixaalta {
+        font-size: 26px;
+    }
+
+    .botao, .botao2 {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .menu {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .caixaalta {
+        font-size: 24px;
+    }
+
+    .botao, .botao2 {
+        width: 70%;
+    }
+
+    .tudo {
+        width: 85%;
+    }
+
+    .camisas {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+}

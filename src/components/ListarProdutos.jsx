@@ -1,19 +1,17 @@
-import "../globals.css";
+import { useState } from "react"
 
-export default function ListarProdutos({lista}){
+export default function ListaProdutos({listaProdutos}){
     return(
-        <div>
-              {
-            lista.map((produto)=>
-            <div key={produto.id}>
-            <h2>{produto.item}</h2>
-            <img src={produto.imagem}/>
-            <p>{produto.preco}</p>
-            <p>{produto.descricao}</p>
-            <p>{produto.tamanho}</p>
-            </div>
-            )
-        }
+        <div className="container">
+            {listaProdutos.map((produto)=>
+            <div key={produto.id} class="card">
+                <p> {produto.item}</p>
+                <img src={produto.imagem}></img>
+                <h3>{produto.preco}</h3>
+                <p>{produto.descricao}</p>
+                <p>{produto.tamanho}</p>
+            </div>    
+                )}
         </div>
-    )
+    );
 }

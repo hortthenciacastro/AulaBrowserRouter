@@ -1,8 +1,9 @@
-import {useState} from "react";
-import ListarProdutos from "../components/ListarProdutos.jsx/ListarProdutos";
-import "../globals.css";
+import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ListarProdutos from '../components/ListarProdutos';
 
-export default function Produtos(){
+export default function Produtos () {
     const [listaProdutos, setListaProdutos] = useState([
         {
 
@@ -306,9 +307,11 @@ export default function Produtos(){
         }
     ])
 
-    return(
+    return (
         <div>
-            <ListarProdutos lista = {listaProdutos}/>
+            <Header />
+            <ListarProdutos listaProdutos={listaProdutos} />
+            <Footer />
         </div>
-    )
+    );
 }

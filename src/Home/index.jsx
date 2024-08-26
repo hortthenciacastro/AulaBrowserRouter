@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Carousel } from 'react-responsive-carousel';
-import Header from '../components/Header/Header';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';  
-import ListarProdutos from '../components/ListarProdutos';  
-export default function HOME() {
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import ListarProdutos from '../components/ListarProdutos';
+
+export default function Home() {
     const [produtosHome, setProdutosHome] = useState([
         {
 
@@ -141,37 +143,34 @@ export default function HOME() {
         }
     ]);
 
-    return(
+    return (
         <>
-        <Header/>
-        <div class='carousel-principal'>
-        <Carousel 
+            <Header />
+            <Carousel
                 infiniteLoop
                 useKeyboardArrows
                 autoPlay
-                showArrows={true}
+                showArrows
                 showStatus={false}
                 showThumbs={false}
-
-                dynamicHeight>
-                <div id='carousel-img'>
-                    <img src='https://i.ytimg.com/vi/Xqo0vcd1Cz4/hqdefault.jpg' alt="Slide 1" />
+                dynamicHeight
+                className="carousel"
+            >
+                <div>
+                    <img src="https://i.pinimg.com/564x/08/02/e9/0802e9a228b3e820141e6594fa080d01.jpg" alt="Slide 1"/>
                 </div>
-
-                <div id='carousel-img'>
-                    <img src='https://image.tmdb.org/t/p/original/9dvbF3d97BpRAqZKNs49VDzJhqk.jpg' alt="Slide 2" />
+                <div>
+                    <img src="https://i.pinimg.com/564x/b7/f0/07/b7f007f070837b8f39dc52a2ea4d1d41.jpg" alt="Slide 2"/>
                 </div>
-                  
-                <div id='carousel-img'>
-                    <img src=' 'alt="Slide 3" />
+                <div>
+                    <img src="https://i.pinimg.com/564x/71/86/12/718612bf81d383b180a3a68fdd93210b.jpg" alt="Slide 3"/>
                 </div>
-      
+                <div>
+                    <img src="https://i.pinimg.com/564x/a1/5f/6b/a15f6bd0ba10dae0004ae35bb0fc013c.jpg" alt="Slide 4"/>
+                </div>
             </Carousel>
-            <ListarProdutos Produtos ={produtosHome}  />
-        </div>
-
-        
-
+            <ListarProdutos listaProdutos={produtosHome} />
+            <Footer />
         </>
     );
-    }
+}

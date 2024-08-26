@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ListarProdutos from '../components/ListarProdutos';
 
-export default function Oferta(){
+export default function Ofertas() {
     const [listaOfertas, setListaOfertas] = useState([
         {
             id: 1,
@@ -198,12 +201,11 @@ export default function Oferta(){
             tamanho: "P"  
         }
     ])
-
-    return(
+    return (
         <div>
-           <ListarProdutos Produtos={listaOfertas} Nome={''}/>
+            <Header />
+            <ListarProdutos listaProdutos={listaOfertas} />
+            <Footer />
         </div>
-    
-      
     );
 }
