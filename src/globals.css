@@ -76,39 +76,11 @@ body {
         margin-top: 20px;
         font-size: 14px;
     }
-
-
-    .caixaalta {
-        font-size: 26px;
-    }
-
-    .botao, .botao2 {
-        width: 60%;
-    }
-}
-
 @media screen and (max-width: 900px) {
     .menu {
         font-size: 13px;
         margin-top: 15px;
     }
-
-    .caixaalta {
-        font-size: 24px;
-    }
-
-    .botao, .botao2 {
-        width: 70%;
-    }
-
-    .tudo {
-        width: 85%;
-    }
-
-    .camisas {
-        width: 100%;
-    }
-}
 
 @media screen and (max-width: 600px) {
     .menu {
